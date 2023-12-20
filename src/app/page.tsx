@@ -1,3 +1,5 @@
+import { Button } from "components";
+
 export default function Home() {
-  return <div>sex</div>;
+  return <Button></Button>;
 }
