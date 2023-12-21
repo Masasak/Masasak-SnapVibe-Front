@@ -4,7 +4,7 @@
 
 ```bash
 $ git clone https://github.com/Masasak/Masasak-SnapVibe-Front.git
-$ cd EveryGSM-client
+$ cd SNAPVIBE-FRONT
 $ pnpm install
 
 # run dev
