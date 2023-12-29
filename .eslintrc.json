@@ -8,7 +8,7 @@
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommand"
+		"plugin:prettier/recommended"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -26,7 +26,6 @@
 		"import"
 	],
 	"rules": {
-		"arrow-body-style": "error",
 		"prefer-arrow-callback": "off",
 		"no-var": "error",
 		"no-dupe-keys": "error",
