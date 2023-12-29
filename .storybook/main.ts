@@ -14,10 +14,7 @@ const config: StorybookConfig = {
 		{
 			name: '@storybook/addon-styling-webpack',
 			options: {
-				plugins: [
-					new VanillaExtractPlugin(),
-					new MiniCssExtractPlugin(),
-				],
+				plugins: [new VanillaExtractPlugin(), new MiniCssExtractPlugin()],
 				rules: [
 					{
 						test: /\.css$/,
