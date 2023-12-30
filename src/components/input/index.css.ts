@@ -9,6 +9,7 @@ export const InputWrap = style({
 	borderRadius: '10px',
 	padding: '8px 0px 25px 16px',
 	boxSizing: 'border-box',
+	cursor: 'text',
 });
 
 export const InputTitle = style({
