@@ -22,7 +22,7 @@ const Input = ({ inputTitle, width }: Props) => {
 		<div
 			className={S.InputWrap}
 			style={assignInlineVars({
-				[S.widthVar]: width === 'long' ? '435px' : '318px',
+				[S.widthVar]: width === 'long' ? '27.1875rem' : '19.875rem',
 			})}
 			onClick={handleDivClick}
 		>

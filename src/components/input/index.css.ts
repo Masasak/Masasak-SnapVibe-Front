@@ -4,28 +4,28 @@ export const widthVar = createVar();
 
 export const InputWrap = style({
 	width: widthVar,
-	height: '70px',
+	height: '4.375rem',
 	backgroundColor: '#2F2E4A',
-	borderRadius: '10px',
-	padding: '8px 0px 25px 16px',
+	borderRadius: '0.625rem',
+	padding: '0.5rem 0rem 1.5625rem 1rem',
 	boxSizing: 'border-box',
 	cursor: 'text',
 });
 
 export const InputTitle = style({
-	fontSize: '14px',
+	fontSize: '0.875rem',
 	fontStyle: 'normal',
 	fontWeight: '400',
 	color: '#777777',
-	paddingBottom: '3px',
+	paddingBottom: '0.1875rem',
 	margin: '0',
 });
 
 export const InputContent = style({
 	width: '90%',
-	height: '19px',
+	height: '1.1875rem',
 	fontFamily: 'Pretendard',
-	fontSize: '16px',
+	fontSize: '1rem',
 	fontStyle: 'normal',
 	fontWeight: '400',
 	background: 'none',
