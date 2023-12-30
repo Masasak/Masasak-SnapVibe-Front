@@ -19,6 +19,5 @@ export const PasswordInput: Story = {
 export const IdInput: Story = {
 	args: {
 		inputTitle: '아이디',
-		width: 'short',
 	},
 };

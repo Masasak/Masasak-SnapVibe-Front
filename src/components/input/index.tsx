@@ -6,7 +6,7 @@ import { useRef } from 'react';
 
 interface Props {
 	inputTitle: string;
-	width: 'long' | 'short';
+	width?: 'long';
 }
 
 const Input = ({ inputTitle, width }: Props) => {
