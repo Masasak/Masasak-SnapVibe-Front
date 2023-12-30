@@ -45,6 +45,10 @@ export function GlobalStyle() {
 					text-decoration: none;
 					color: inherit;
 				}
+
+				input {
+					font-family: 'Pretendard';
+				}
 			`}
 		/>
 	);

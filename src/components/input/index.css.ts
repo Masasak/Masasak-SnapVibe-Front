@@ -24,7 +24,6 @@ export const InputTitle = style({
 export const InputContent = style({
 	width: '90%',
 	height: '1.1875rem',
-	fontFamily: 'Pretendard',
 	fontSize: '1rem',
 	fontStyle: 'normal',
 	fontWeight: '400',
