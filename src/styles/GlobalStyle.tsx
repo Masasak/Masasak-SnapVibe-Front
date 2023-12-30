@@ -15,6 +15,9 @@ export function GlobalStyle() {
 					overflow-x: hidden;
 				}
 
+				@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css');
+				@import url('https://use.typekit.net/cei0oyt.css');
+
 				body,
 				* {
 					font-family:
@@ -23,7 +26,7 @@ export function GlobalStyle() {
 						-apple-system,
 						BlinkMacSystemFont,
 						system-ui,
-						Roboto,
+						roboto,
 						'Helvetica Neue',
 						'Segoe UI',
 						'Apple SD Gothic Neo',
@@ -34,6 +37,8 @@ export function GlobalStyle() {
 						'Segoe UI Symbol',
 						sans-serif;
 					box-sizing: border-box;
+					padding: 0;
+					margin: 0;
 				}
 
 				a {
