@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Input>;
 export const PasswordInput: Story = {
 	args: {
 		inputTitle: '비밀번호',
-		width: 'long',
+		inputWidth: 'long',
 	},
 };
 

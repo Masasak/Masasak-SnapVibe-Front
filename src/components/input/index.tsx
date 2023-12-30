@@ -6,11 +6,14 @@ import { useRef } from 'react';
 
 interface Props {
 	inputTitle: string;
-	width?: 'long';
+	inputWidth?: 'long';
 }
 
-const Input = ({ inputTitle, width }: Props) => {
+const Input = ({ inputTitle, inputWidth }: Props) => {
 	const inputRef = useRef<HTMLInputElement>(null);
+
+	const width = '19.875rem';
+	const longWidth = '27.1875rem';
 
 	const handleDivClick = () => {
 		if (inputRef.current) {
@@ -22,7 +25,7 @@ const Input = ({ inputTitle, width }: Props) => {
 		<div
 			className={S.InputWrap}
 			style={assignInlineVars({
-				[S.widthVar]: width === 'long' ? '27.1875rem' : '19.875rem',
+				[S.widthVar]: inputWidth === 'long' ? longWidth : width,
 			})}
 			onClick={handleDivClick}
 		>
