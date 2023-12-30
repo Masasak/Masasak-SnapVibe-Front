@@ -9,4 +9,16 @@ export default {
 
 type Story = StoryObj<typeof Input>;
 
-export const TestInput: Story = {};
+export const PasswordInput: Story = {
+	args: {
+		inputTitle: '비밀번호',
+		width: 'long',
+	},
+};
+
+export const IdInput: Story = {
+	args: {
+		inputTitle: '아이디',
+		width: 'short',
+	},
+};
