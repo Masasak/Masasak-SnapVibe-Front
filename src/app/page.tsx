@@ -1,5 +1,3 @@
-import { Button } from 'components';
-
 export default function Home() {
-	return <Button></Button>;
+  return <p>ddd</p>;
 }
