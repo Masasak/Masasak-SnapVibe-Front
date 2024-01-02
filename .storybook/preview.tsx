@@ -1,9 +1,8 @@
 'use client';
 
 import type { Preview } from '@storybook/react';
-import { withThemeFromJSXProvider } from '@storybook/addon-styling';
+import '../src/styles/GlobalStyle.css';
 
-import { GlobalStyle } from '../src/styles';
 import React from 'react';
 
 const preview: Preview = {
@@ -30,7 +29,6 @@ const preview: Preview = {
       decorators: [
         Story => (
           <>
-            <GlobalStyle />
             <Story />
           </>
         ),

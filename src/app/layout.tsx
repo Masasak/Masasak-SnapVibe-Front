@@ -1,5 +1,5 @@
-import { GlobalStyle } from 'styles';
 import type { Metadata } from 'next';
+import 'styles/GlobalStyle.css';
 
 export const metadata: Metadata = {
   title: 'SNAPBIVE',
@@ -20,8 +20,11 @@ export default function RootLayout({
           crossOrigin=""
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable-dynamic-subset.css"
         />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/cei0oyt.css"
+        ></link>
       </head>
-      <GlobalStyle />
       <body>{children}</body>
     </html>
   );
