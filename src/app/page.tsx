@@ -1,3 +1,5 @@
+import { Input } from 'components';
+
 export default function Home() {
-  return <p>ddd</p>;
+  return <Input inputWidth="long" inputTitle="d" />;
 }
