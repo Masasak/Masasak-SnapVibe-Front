@@ -1,5 +1,4 @@
 import { style, createVar } from '@vanilla-extract/css';
-import { typo } from 'styles';
 
 export const widthVar = createVar();
 
@@ -33,8 +32,4 @@ export const InputContent = style({
   border: 'none',
   outline: 'none',
   padding: '0',
-});
-
-export const Test = style({
-  color: typo.h1.color,
 });

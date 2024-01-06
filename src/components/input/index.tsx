@@ -33,7 +33,6 @@ const Input = ({ inputTitle, inputWidth }: Props) => {
         <p className={S.InputTitle}>{inputTitle}</p>
         <input type="text" className={S.InputContent} ref={inputRef} />
       </div>
-      <p className={S.Test}>dddd</p>
     </>
   );
 };
