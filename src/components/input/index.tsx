@@ -22,18 +22,16 @@ const Input = ({ inputTitle, inputWidth }: Props) => {
   };
 
   return (
-    <>
-      <div
-        className={S.InputWrap}
-        style={assignInlineVars({
-          [S.widthVar]: inputWidth === 'long' ? longWidth : width,
-        })}
-        onClick={handleDivClick}
-      >
-        <p className={S.InputTitle}>{inputTitle}</p>
-        <input type="text" className={S.InputContent} ref={inputRef} />
-      </div>
-    </>
+    <div
+      className={S.InputWrap}
+      style={assignInlineVars({
+        [S.widthVar]: inputWidth === 'long' ? longWidth : width,
+      })}
+      onClick={handleDivClick}
+    >
+      <p className={S.InputTitle}>{inputTitle}</p>
+      <input type="text" className={S.InputContent} ref={inputRef} />
+    </div>
   );
 };
 
