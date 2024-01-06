@@ -9,7 +9,7 @@ export const theme = createGlobalTheme(':root', {
     blue: '#0055D3',
     blue2: '#0095F6',
   },
-  gray: {
+  grayScale: {
     Darkgray: '#222222',
     gray: '#999999',
     gray2: '#777777',
