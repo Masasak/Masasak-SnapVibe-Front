@@ -9,7 +9,7 @@ interface Props {
   inputWidth?: 'long';
 }
 
-const Input = ({ inputTitle, inputWidth }: Props) => {
+const Input: React.FC<Props> = ({ inputTitle, inputWidth }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const width = '19.875rem';
