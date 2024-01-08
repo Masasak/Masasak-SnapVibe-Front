@@ -35,10 +35,11 @@ globalStyle('a', {
   color: 'inherit',
 });
 
-globalStyle('input,button', {
-  fontFamily: fonts[1],
+globalStyle('input', {
+  fontFamily: 'Pretendard',
 });
 
 globalStyle('button', {
   cursor: 'pointer',
+  fontFamily: 'Pretendard',
 });
