@@ -1,5 +1,5 @@
 import { style, createVar } from '@vanilla-extract/css';
-import { theme, typo } from 'styles';
+import { theme } from 'styles';
 
 export const widthVar = createVar();
 
@@ -13,7 +13,7 @@ export const InputWrap = style({
 });
 
 export const InputTitle = style({
-  ...typo.Body3,
+  ...theme.typo.Body3,
   fontWeight: '400',
   color: theme.grayScale.gray2,
   paddingBottom: '0.1875rem',
@@ -22,7 +22,7 @@ export const InputTitle = style({
 export const InputContent = style({
   width: '90%',
   height: '1.1875rem',
-  ...typo.Body2,
+  ...theme.typo.Body2,
   color: theme.grayScale.white,
   fontStyle: 'normal',
   fontWeight: '400',

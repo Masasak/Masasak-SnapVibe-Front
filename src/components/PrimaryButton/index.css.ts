@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css';
-import { theme, typo } from 'styles';
+import { theme } from 'styles';
 
 export const ButtonStyle = style({
-  ...typo.h4,
+  ...theme.typo.h4,
   fontWeight: '500',
   color: theme.grayScale.white,
   width: '27.1875rem',
