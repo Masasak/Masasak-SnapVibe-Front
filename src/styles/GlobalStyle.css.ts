@@ -36,5 +36,10 @@ globalStyle('a', {
 });
 
 globalStyle('input', {
-  fontFamily: fonts[1],
+  fontFamily: 'Pretendard',
+});
+
+globalStyle('button', {
+  cursor: 'pointer',
+  fontFamily: 'Pretendard',
 });

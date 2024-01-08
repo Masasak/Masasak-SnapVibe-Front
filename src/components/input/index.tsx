@@ -4,12 +4,12 @@ import * as S from './index.css';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import { useRef } from 'react';
 
-interface Props {
+interface InputProps {
   inputTitle: string;
   inputWidth?: 'long';
 }
 
-const Input = ({ inputTitle, inputWidth }: Props) => {
+const Input: React.FC<InputProps> = ({ inputTitle, inputWidth }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const width = '19.875rem';
