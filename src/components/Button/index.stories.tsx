@@ -14,8 +14,3 @@ export const PrimaryButton: Story = {
     children: '로그인',
   },
 };
-export const SubButton: Story = {
-  args: {
-    children: '신고하기',
-  },
-};
