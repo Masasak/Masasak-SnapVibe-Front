@@ -4,16 +4,9 @@ import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 import * as S from './index.css';
 
-interface ButtonProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {}
-
-const PrimaryButton: React.FC<ButtonProps> = ({
-  children = '',
-  ...attributes
-}) => {
+const PrimaryButton: React.FC<
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+> = ({ children = '', ...attributes }) => {
   return (
     <button className={S.ButtonStyle} {...attributes}>
       {children}
