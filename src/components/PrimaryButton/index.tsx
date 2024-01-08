@@ -10,7 +10,10 @@ interface ButtonProps
     HTMLButtonElement
   > {}
 
-const Button: React.FC<ButtonProps> = ({ children = '', ...attributes }) => {
+const PrimaryButton: React.FC<ButtonProps> = ({
+  children = '',
+  ...attributes
+}) => {
   return (
     <button className={S.ButtonStyle} {...attributes}>
       {children}
@@ -18,4 +21,4 @@ const Button: React.FC<ButtonProps> = ({ children = '', ...attributes }) => {
   );
 };
 
-export default Button;
+export default PrimaryButton;
