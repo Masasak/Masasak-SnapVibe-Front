@@ -1,4 +1,4 @@
-import { theme } from './../../styles/theme.css';
+import { theme } from 'styles';
 import { style } from '@vanilla-extract/css';
 
 export const HeaderWrapper = style({
@@ -11,7 +11,6 @@ export const HeaderWrapper = style({
 
 export const HeaderContainer = style({
   width: '82.5rem',
-  margin: '0 18.75rem',
   height: '5rem',
   gap: '32rem',
   display: 'flex',
