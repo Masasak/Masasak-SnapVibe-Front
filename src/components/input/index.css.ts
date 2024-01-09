@@ -27,6 +27,4 @@ export const InputContent = style({
   fontStyle: 'normal',
   fontWeight: '400',
   background: 'none',
-  border: 'none',
-  outline: 'none',
 });

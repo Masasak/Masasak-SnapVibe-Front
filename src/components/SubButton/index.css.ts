@@ -8,6 +8,5 @@ export const ButtonStyle = style({
   width: '6.625rem',
   height: '4.375rem',
   borderRadius: '0.625rem',
-  border: 'none',
   background: theme.color.textbox,
 });
