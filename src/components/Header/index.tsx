@@ -1,7 +1,10 @@
 'use client';
 
+import Image from 'next/image';
+
 import * as S from './index.css';
-import { ChatIcon, LogoIcon, NoticeIcon, SearchIcon, UserIcon } from 'assets';
+import { ChatIcon, NoticeIcon, SearchIcon, UserIcon } from 'assets';
+import LogoIcon from 'assets/png/LogoIcon.png';
 
 const Header = () => {
   return (
@@ -10,7 +13,7 @@ const Header = () => {
         <div className={S.SearchWrapper}>
           <div className={S.LogoContainer}>
             <div className={S.IconWrapper}>
-              <LogoIcon />
+              <Image src={LogoIcon} alt="Logo Icon" width={119} height={28} />
             </div>
           </div>
           <div className={S.SearchContainer}>
