@@ -37,9 +37,12 @@ globalStyle('a', {
 
 globalStyle('input', {
   fontFamily: 'Pretendard',
+  border: 'none',
+  outline: 'none',
 });
 
 globalStyle('button', {
   cursor: 'pointer',
+  border: 'none',
   fontFamily: 'Pretendard',
 });

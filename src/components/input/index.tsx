@@ -1,10 +1,15 @@
 'use client';
 
-import * as S from './index.css';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
-import { useRef } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes, useRef } from 'react';
 
-interface InputProps {
+import * as S from './index.css';
+
+interface InputProps
+  extends DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   inputTitle: string;
   inputWidth?: 'long';
 }

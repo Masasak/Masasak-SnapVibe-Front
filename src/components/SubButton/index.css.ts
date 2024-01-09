@@ -2,11 +2,11 @@ import { style } from '@vanilla-extract/css';
 import { theme } from 'styles';
 
 export const ButtonStyle = style({
-  ...theme.typo.h4,
+  ...theme.typo.Body2,
   fontWeight: '500',
   color: theme.grayScale.white,
-  width: '27.1875rem',
+  width: '6.625rem',
   height: '4.375rem',
   borderRadius: '0.625rem',
-  backgroundColor: theme.color.purple,
+  background: theme.color.textbox,
 });
