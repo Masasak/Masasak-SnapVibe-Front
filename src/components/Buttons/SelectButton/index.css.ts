@@ -10,6 +10,6 @@ export const ButtonStyle = style({
   ...theme.typo.Body2,
 
   ':hover': {
-    border: '0.0625rem solid white',
+    border: `0.0625rem solid ${theme.grayScale.white}`,
   },
 });
