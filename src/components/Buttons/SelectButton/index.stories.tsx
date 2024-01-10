@@ -5,6 +5,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 export default {
   title: 'SelectButton',
   component: SelectButton,
+  parameters: {
+    backgrounds: {
+      default: 'dark', // 각 스토리에 배경을 dark로 설정
+    },
+  },
 } as Meta<typeof SelectButton>;
 
 type Story = StoryObj<typeof SelectButton>;
