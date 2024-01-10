@@ -11,7 +11,7 @@ type Story = StoryObj<typeof SelectButton>;
 
 export const Primary: Story = {
   args: {
-    children: '잔인함 ( 부적절한 이미지나 혐오적인 이미지을 올린 경우 )',
+    children: '잔인함 ',
   },
 };
 

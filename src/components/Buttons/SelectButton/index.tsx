@@ -9,7 +9,7 @@ const SelectButton: React.FC<
 > = ({ children = '', ...attributes }) => {
   return (
     <button className={S.ButtonStyle} {...attributes}>
-      {children}
+      <div className={S.ButtonSort}>{children}</div>
     </button>
   );
 };
