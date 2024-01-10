@@ -9,5 +9,4 @@ export const ButtonStyle = style({
   height: '4.375rem',
   borderRadius: '0.625rem',
   backgroundColor: theme.color.purple,
-  border: 'none',
 });
