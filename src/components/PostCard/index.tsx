@@ -27,6 +27,9 @@ const PostCard = () => {
           alt=""
         />
       </div>
+      <div className={S.CardContentWrapper}>
+        <div className={S.CardTitleWrapper}></div>
+      </div>
     </div>
   );
 };

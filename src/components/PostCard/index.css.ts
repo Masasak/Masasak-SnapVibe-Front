@@ -40,3 +40,15 @@ export const ProfileImgWrapper = style({
   left: '3.8%',
   overflow: 'hidden',
 });
+
+export const CardContentWrapper = style({
+  width: '23.25rem',
+  margin: '0 auto',
+});
+
+export const CardTitleWrapper = style({
+  width: '100%',
+  height: '1.5rem',
+  marginTop: '2.0625rem',
+  backgroundColor: 'yellow',
+});
