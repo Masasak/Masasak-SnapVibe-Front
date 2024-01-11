@@ -9,15 +9,10 @@ export const ButtonStyle = style({
   color: theme.grayScale.white,
   ...theme.typo.Body2,
   display: 'flex',
+  alignItems: 'center',
+  padding: '0 1.5rem',
 
   ':hover': {
     border: `0.0625rem solid ${theme.grayScale.white}`,
   },
-});
-
-export const ButtonSort = style({
-  height: '4.375rem',
-  alignItems: 'center',
-  paddingLeft: '1.5rem',
-  display: 'flex',
 });
