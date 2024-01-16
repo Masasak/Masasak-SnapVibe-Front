@@ -24,7 +24,7 @@ const PostCard = () => {
           fill
           className={S.Img}
           src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRGeI6%2Fbtq21db32du%2F84vjG2iZc3H6iuYnUKkb7k%2Fimg.jpg"
-          alt="프러ㅍ"
+          alt="프로필사진"
         />
       </div>
       <div className={S.CardContentWrapper}>
