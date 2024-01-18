@@ -1,5 +1,7 @@
-import { style } from '@vanilla-extract/css';
+import { style, createVar } from '@vanilla-extract/css';
 import { theme } from 'styles';
+
+export const isFollowedVar = createVar();
 
 export const PostCardWrap = style({
   width: '26.25rem',
@@ -82,7 +84,7 @@ export const UserId = style({
 export const FollowTitle = style({
   ...theme.typo.Body3,
   fontWeight: '500',
-  color: theme.color.blue2,
+  color: isFollowedVar,
   paddingTop: '1px',
   cursor: 'pointer',
 });

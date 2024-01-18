@@ -2,36 +2,62 @@
 
 import Image from 'next/image';
 
+import { assignInlineVars } from '@vanilla-extract/dynamic';
+
+import { useState } from 'react';
+
 import * as S from './index.css';
 import * as I from 'assets';
+import { theme } from 'styles';
 
-const PostCard = () => {
+interface PostCardProps {
+  isLiked: boolean;
+  postImgUrl: string;
+  profileImgUrl: string;
+  userId: string;
+  isFollowed: boolean;
+}
+
+const PostCard: React.FC<PostCardProps> = ({
+  isLiked,
+  postImgUrl,
+  profileImgUrl,
+  userId,
+  isFollowed,
+}) => {
+  const [liked, setLiked] = useState<boolean>(isLiked);
+  const [followed, setFollwed] = useState<boolean>(isFollowed);
   return (
     <div className={S.PostCardWrap}>
-      <div className={S.HeartIconWrapper}>
-        <I.HeartIcon />
+      <div className={S.HeartIconWrapper} onClick={() => setLiked(!liked)}>
+        <I.HeartIcon isLiked={liked} />
       </div>
       <div className={S.PostCardImgWrapper}>
-        <Image
-          fill
-          className={S.Img}
-          src="https://i.namu.wiki/i/kZ7tWSGl2Y5JbYfQyyE4b0UU6YYtlQ8ep-snNnPY6pPVXPDQ4nvs2GEr0LQj6WrNlzVEBxA1WHr7pcQV4nMuIQ.webp"
-          alt="게시물사진"
-        />
+        <Image fill className={S.Img} src={postImgUrl ?? ''} alt="게시글사진" />
       </div>
       <div className={S.ProfileImgWrapper}>
         <Image
           fill
           className={S.Img}
-          src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRGeI6%2Fbtq21db32du%2F84vjG2iZc3H6iuYnUKkb7k%2Fimg.jpg"
+          src={profileImgUrl ?? ''}
           alt="프로필사진"
         />
       </div>
       <div className={S.CardContentWrapper}>
         <div className={S.CardTitleWrapper}>
           <div className={S.ContentWrapper}>
-            <p className={S.UserId}>dongwook1207</p>
-            <p className={S.FollowTitle}>팔로우</p>
+            <p className={S.UserId}>{userId}</p>
+            <p
+              onClick={() => setFollwed(!followed)}
+              style={assignInlineVars({
+                [S.isFollowedVar]: followed
+                  ? theme.grayScale.gray
+                  : theme.color.blue2,
+              })}
+              className={S.FollowTitle}
+            >
+              {followed ? '팔로잉' : '팔로우'}
+            </p>
           </div>
           <div className={S.CardIconWrapper}>
             <div className={S.IconWrapper}>
