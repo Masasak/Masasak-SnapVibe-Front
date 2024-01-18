@@ -16,6 +16,7 @@ export const PostCardImgWrapper = style({
   borderTopRightRadius: '0.625rem',
   position: 'relative',
   overflow: 'hidden',
+  cursor: 'pointer',
 });
 
 export const Img = style({
@@ -43,6 +44,7 @@ export const ProfileImgWrapper = style({
   top: '52.4%',
   left: '3.8%',
   overflow: 'hidden',
+  cursor: 'pointer',
 });
 
 export const CardContentWrapper = style({
@@ -99,6 +101,7 @@ export const HashTagStyle = style({
   ...theme.typo.Body3,
   color: theme.color.blue2,
   fontWeight: '500',
+  cursor: 'pointer',
 });
 
 export const SubTitleStyle = style({
