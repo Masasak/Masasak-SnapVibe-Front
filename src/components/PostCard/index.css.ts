@@ -85,7 +85,7 @@ export const FollowTitle = style({
   ...theme.typo.Body3,
   fontWeight: '500',
   color: isFollowedVar,
-  paddingTop: '0.0625rem',
+  paddingTop: '1px',
   cursor: 'pointer',
 });
 
