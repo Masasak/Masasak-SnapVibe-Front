@@ -69,10 +69,10 @@ const PostCard: React.FC<PostCardProps> = ({
           </div>
         </div>
         <div className={S.CardSubTitleWrapper}>
-          <p className={S.HashTagStyle}># newjeans</p>
-          <p className={S.SubTitleStyle}>Asap Ditto hipe Boy</p>
-          <p className={S.HashTagStyle}># haerin</p>
-          <p className={S.SubTitleStyle}>뉴진스 이정우</p>
+          <span className={S.HashTagStyle}># newjeans</span>
+          <span className={S.SubTitleStyle}>Asap Ditto hipe Boy</span>
+          <span className={S.HashTagStyle}># haerin</span>
+          <span className={S.SubTitleStyle}>뉴진스 이정우</span>
         </div>
         <p className={S.WriteCommentTitle}>댓글 달기...</p>
       </div>

@@ -92,11 +92,10 @@ export const FollowTitle = style({
 export const CardSubTitleWrapper = style({
   marginTop: '0.25rem',
   width: '86.6%',
-  display: 'flex',
-  gap: '0.5rem',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
+  color: theme.grayScale.white,
 });
 
 export const HashTagStyle = style({
@@ -104,12 +103,14 @@ export const HashTagStyle = style({
   color: theme.color.blue2,
   fontWeight: '500',
   cursor: 'pointer',
+  marginRight: '0.5rem',
 });
 
 export const SubTitleStyle = style({
   ...theme.typo.Body3,
   color: theme.grayScale.white,
   fontWeight: '500',
+  marginRight: '0.5rem',
 });
 
 export const WriteCommentTitle = style({
