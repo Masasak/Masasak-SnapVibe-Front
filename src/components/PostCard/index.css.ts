@@ -29,8 +29,8 @@ export const HeartIconWrapper = style({
   cursor: 'pointer',
   position: 'absolute',
   zIndex: '1',
-  left: '5%',
-  top: '3.8%',
+  left: '1.3125rem',
+  top: '1rem',
 });
 
 export const IconWrapper = style({
@@ -43,8 +43,8 @@ export const ProfileImgWrapper = style({
   borderRadius: '100%',
   border: '0.3125rem solid #222222',
   position: 'absolute',
-  top: '52.4%',
-  left: '3.8%',
+  top: '13.75rem',
+  left: '1rem',
   overflow: 'hidden',
   cursor: 'pointer',
 });
