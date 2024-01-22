@@ -8,22 +8,16 @@ import { useState } from 'react';
 
 import * as S from './index.css';
 import * as I from 'assets';
+import { PostCardTypes } from 'types';
+
 import { theme } from 'styles';
 
 interface PostCardProps {
-  isLiked: boolean;
-  postImgUrl: string;
-  profileImgUrl: string;
-  userId: string;
-  isFollowed: boolean;
+  data: PostCardTypes;
 }
 
 const PostCard: React.FC<PostCardProps> = ({
-  isLiked,
-  postImgUrl,
-  profileImgUrl,
-  userId,
-  isFollowed,
+  data: { isLiked, isFollowed, postImgUrl, profileImgUrl, userId },
 }) => {
   const [liked, setLiked] = useState<boolean>(isLiked);
   const [followed, setFollwed] = useState<boolean>(isFollowed);
