@@ -48,7 +48,7 @@ const PostCard: React.FC<PostCardProps> = ({
           <div className={S.ContentWrapper}>
             <p className={S.UserId}>{userId}</p>
             <p
-              onClick={() => setFollwed(!followed)}
+              onClick={() => setFollwed(prevState => !prevState)}
               style={assignInlineVars({
                 [S.isFollowedVar]: followed
                   ? theme.grayScale.gray
