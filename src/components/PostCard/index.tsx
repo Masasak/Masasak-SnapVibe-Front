@@ -29,7 +29,10 @@ const PostCard: React.FC<PostCardProps> = ({
   const [followed, setFollwed] = useState<boolean>(isFollowed);
   return (
     <div className={S.PostCardWrap}>
-      <div className={S.HeartIconWrapper} onClick={() => setLiked(!liked)}>
+      <div
+        className={S.HeartIconWrapper}
+        onClick={() => setLiked(prevState => !prevState)}
+      >
         <I.HeartIcon isLiked={liked} />
       </div>
       <div className={S.PostCardImgWrapper}>
