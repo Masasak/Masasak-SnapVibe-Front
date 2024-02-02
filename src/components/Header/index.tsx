@@ -19,7 +19,7 @@ const Header = () => {
           <div className={S.SearchContainer}>
             <div className={S.SearchBox}>
               <div className={S.IconWrapper}>
-                <SearchIcon />
+                <SearchIcon color="gray" />
               </div>
               <input className={S.SearchInput} placeholder="검색" />
             </div>
