@@ -27,6 +27,7 @@ export const SearchInputWrapper = style({
   padding: '1rem 0 1rem 1.25rem',
   gap: '0.75rem',
   marginBottom: '1.875rem',
+  cursor: 'text',
 });
 
 export const SearchInput = style({
