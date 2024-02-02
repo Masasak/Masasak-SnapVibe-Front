@@ -10,7 +10,6 @@ const CheckIcon: React.FC<CheckIconProps> = ({ isChecked }) => (
     viewBox="0 0 36 36"
     fill="none"
   >
-    {' '}
     {isChecked ? (
       <>
         <circle cx="18" cy="18" r="17.5" fill="white" stroke="white" />
