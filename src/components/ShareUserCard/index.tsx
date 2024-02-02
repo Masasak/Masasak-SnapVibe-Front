@@ -10,13 +10,15 @@ interface ShareUserCardProps {
     profileImgUrl: string;
     userId: string;
   };
+  isChecked: boolean;
+  onCardClick: () => void;
 }
 
 const ShareUserCard: React.FC<ShareUserCardProps> = ({
   data: { profileImgUrl, userId },
+  isChecked,
+  onCardClick,
 }) => {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
-
   return (
     <div className={S.UserCardWrapper}>
       <div className={S.UserInfoWrapper}>
@@ -25,10 +27,7 @@ const ShareUserCard: React.FC<ShareUserCardProps> = ({
         </div>
         <div className={S.UserId}>{userId}</div>
       </div>
-      <div
-        className={S.CheckIconWrapper}
-        onClick={() => setIsChecked(prev => !prev)}
-      >
+      <div className={S.CheckIconWrapper} onClick={onCardClick}>
         <I.CheckIcon isChecked={isChecked} />
       </div>
     </div>
