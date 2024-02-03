@@ -35,7 +35,7 @@ const ShareModal = () => {
     setInputValue('');
   };
 
-  const handleDivClick = () => {
+  const handleInputFocus = () => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
@@ -60,7 +60,7 @@ const ShareModal = () => {
               ? '0.4375rem 0 0.5rem 1.25rem'
               : '0.9375rem 0 1rem 1.25rem',
         })}
-        onClick={handleDivClick}
+        onClick={handleInputFocus}
       >
         <div className={S.SearchIconWrapper}>
           <I.SearchIcon color={inputValue.length > 0 ? 'white' : 'gray'} />
