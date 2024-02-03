@@ -25,8 +25,6 @@ const ShareModal = () => {
 
   const debounceSerachUser = useDebounce(inputValue, 300);
 
-  console.log(isSelected);
-
   const isUserSelected = (userId: string) => {
     setIsSelected(prev => {
       const prevSelectedUser = prev.includes(userId);
