@@ -1,16 +1,18 @@
-import { style } from '@vanilla-extract/css';
+import { style, createVar } from '@vanilla-extract/css';
 import { theme } from 'styles';
+
+export const paddingVar = createVar();
 
 export const ShareModalWrapper = style({
   width: '35.9375rem',
-  height: '42.125rem',
+  height: 'fit-content',
   backgroundColor: theme.color.purple3,
   borderRadius: '1.25rem',
   position: 'relative',
   padding: '2.5rem 2.25rem 3.75rem 2.25rem',
 });
 
-export const CancelIconWrapper = style({
+export const ModalCloseButton = style({
   cursor: 'pointer',
   position: 'absolute',
   top: '1rem',
@@ -19,24 +21,28 @@ export const CancelIconWrapper = style({
 
 export const SearchInputWrapper = style({
   width: '31.4375rem',
-  height: '3.125rem',
+  height: 'fit-content',
   backgroundColor: theme.color.textbox,
   borderRadius: '3.125rem',
   display: 'flex',
   alignItems: 'center',
-  padding: '1rem 0 1rem 1.25rem',
-  gap: '0.75rem',
+  padding: paddingVar,
   marginBottom: '1.875rem',
   cursor: 'text',
+});
+
+export const SearchIconWrapper = style({
+  marginRight: '0.75rem',
+  height: '1rem',
 });
 
 export const SearchInput = style({
   ...theme.typo.Body2,
   color: theme.grayScale.white,
-  flex: '1',
   fontWeight: '400',
   background: 'none',
   '::placeholder': {
+    ...theme.typo.Body2,
     color: theme.grayScale.gray,
   },
 });
@@ -63,4 +69,28 @@ export const ShareButton = style({
   backgroundColor: theme.color.purple,
   position: 'absolute',
   bottom: '1.875rem',
+});
+
+export const UserTag = style({
+  width: 'fit-content',
+  height: '2.1875rem',
+  borderRadius: '6.25rem',
+  padding: '0.5rem',
+  ...theme.typo.Body2,
+  backgroundColor: theme.color.purple2,
+  color: theme.grayScale.white,
+  position: 'relative',
+});
+
+export const TagWrapper = style({
+  display: 'flex',
+  gap: '0.375rem',
+  flexWrap: 'wrap',
+});
+
+export const CancelUserTagButton = style({
+  cursor: 'pointer',
+  position: 'absolute',
+  right: '0.125rem',
+  top: '-0.375rem',
 });
