@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
@@ -16,6 +16,12 @@ const ShareModal = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [isSelected, setIsSelected] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isSelected.length > 0) {
+      inputRef.current?.focus();
+    }
+  }, [isSelected]);
 
   const debounceSerachUser = useDebounce(inputValue, 300);
 
@@ -80,7 +86,7 @@ const ShareModal = () => {
             : ''}
           <input
             className={S.SearchInput}
-            placeholder="검색"
+            placeholder={isSelected.length > 0 ? '' : '검색'}
             onChange={e => setInputValue(e.target.value)}
             ref={inputRef}
             value={inputValue}
