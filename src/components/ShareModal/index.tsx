@@ -41,7 +41,7 @@ const ShareModal = () => {
     }
   };
 
-  const handleCancelSelectedUser = (userId: string) => {
+  const cancelSelectedUser = (userId: string) => {
     setIsSelected(prev => {
       return prev.filter(user => user !== userId);
     });
@@ -72,7 +72,7 @@ const ShareModal = () => {
                   <div className={S.UserTag} key={userId}>
                     <div
                       className={S.CancelUserTagButton}
-                      onClick={() => handleCancelSelectedUser(userId)}
+                      onClick={() => cancelSelectedUser(userId)}
                     >
                       <I.CancelIcon size="0.75rem" />
                     </div>
