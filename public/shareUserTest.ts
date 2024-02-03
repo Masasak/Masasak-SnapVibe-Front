@@ -1,4 +1,4 @@
-export const shareUserTestData = [
+export const shareUserTest = [
   {
     userId: 'dongwook1207',
     profileImgUrl:

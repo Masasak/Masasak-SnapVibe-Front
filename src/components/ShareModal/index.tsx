@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
-import { shareUserTestData } from '../../../public/shareUserTest';
+import { shareUserTest } from '@public/shareUserTest';
 
 import useDebounce from 'hooks/useDebounce';
 
@@ -92,7 +92,7 @@ const ShareModal = () => {
         </div>
       </div>
       <div className={S.UserCardBox}>
-        {shareUserTestData
+        {shareUserTest
           .filter(userInfo =>
             debounceSerachUser.length <= 0
               ? true
