@@ -104,16 +104,14 @@ const ShareModal = () => {
         </div>
       </div>
       <div className={S.UserCardBox}>
-        {handleUserList(shareUserTest).map((userInfo, i) => {
-          return (
-            <ShareUserCard
-              data={userInfo}
-              key={i}
-              isChecked={isSelected.includes(userInfo.userId)}
-              onCardClick={() => isUserSelected(userInfo.userId)}
-            />
-          );
-        })}
+        {handleUserList(shareUserTest).map(userInfo => (
+          <ShareUserCard
+            data={userInfo}
+            key={userInfo.userId}
+            isChecked={isSelected.includes(userInfo.userId)}
+            onCardClick={() => isUserSelected(userInfo.userId)}
+          />
+        ))}
       </div>
       <button className={S.ShareButton}>보내기</button>
     </div>
