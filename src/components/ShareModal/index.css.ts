@@ -40,6 +40,8 @@ export const SearchInput = style({
   ...theme.typo.Body2,
   color: theme.grayScale.white,
   fontWeight: '400',
+  flex: '1',
+  minWidth: '1.875rem',
   background: 'none',
   '::placeholder': {
     ...theme.typo.Body2,
@@ -86,6 +88,7 @@ export const TagWrapper = style({
   display: 'flex',
   gap: '0.375rem',
   flexWrap: 'wrap',
+  width: '26.875rem',
 });
 
 export const CancelUserTagButton = style({
