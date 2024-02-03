@@ -66,21 +66,18 @@ const ShareModal = () => {
           <I.SearchIcon color={inputValue.length > 0 ? 'white' : 'gray'} />
         </div>
         <div className={S.TagWrapper}>
-          {isSelected.length > 0
-            ? isSelected.map(userId => {
-                return (
-                  <div className={S.UserTag} key={userId}>
-                    <div
-                      className={S.CancelUserTagButton}
-                      onClick={() => cancelSelectedUser(userId)}
-                    >
-                      <I.CancelIcon size="0.75rem" />
-                    </div>
-                    {userId}
-                  </div>
-                );
-              })
-            : ''}
+          {isSelected.length > 0 &&
+            isSelected.map(userId => (
+              <div className={S.UserTag} key={userId}>
+                <div
+                  className={S.CancelUserTagButton}
+                  onClick={() => cancelSelectedUser(userId)}
+                >
+                  <I.CancelIcon size="0.75rem" />
+                </div>
+                {userId}
+              </div>
+            ))}
           <input
             className={S.SearchInput}
             placeholder={isSelected.length > 0 ? '' : '검색'}
