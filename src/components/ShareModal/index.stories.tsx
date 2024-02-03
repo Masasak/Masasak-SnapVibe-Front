@@ -9,6 +9,4 @@ export default {
 
 type Story = StoryObj<typeof ShareModal>;
 
-export const Primary: Story = {
-  args: {},
-};
+export const Primary: Story = {};
