@@ -6,11 +6,10 @@ import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 import { shareUserTest } from '@public/shareUserTest';
 
-import useDebounce from 'hooks/useDebounce';
-
 import * as S from './index.css';
 import * as I from 'assets';
 import { ShareUserCard } from 'components';
+import { useDebounce } from 'hooks';
 
 const ShareModal = () => {
   const [inputValue, setInputValue] = useState<string>('');
