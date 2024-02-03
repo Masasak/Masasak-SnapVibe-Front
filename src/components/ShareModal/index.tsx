@@ -30,13 +30,11 @@ const ShareModal = () => {
   const debounceSerachUser = useDebounce(inputValue, 300);
 
   const isUserSelected = (userId: string) => {
-    setIsSelected(prev => {
-      const prevSelectedUser = prev.includes(userId);
-
-      return prevSelectedUser
+    setIsSelected(prev =>
+      prev.includes(userId)
         ? prev.filter(user => user !== userId)
-        : [...prev, userId];
-    });
+        : [...prev, userId],
+    );
     setInputValue('');
   };
 
