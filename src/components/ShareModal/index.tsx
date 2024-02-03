@@ -11,6 +11,11 @@ import * as I from 'assets';
 import { ShareUserCard } from 'components';
 import { useDebounce } from 'hooks';
 
+interface TestUserListType {
+  userId: string;
+  profileImgUrl: string;
+}
+
 const ShareModal = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [isSelected, setIsSelected] = useState<string[]>([]);
@@ -45,6 +50,17 @@ const ShareModal = () => {
     setIsSelected(prev => {
       return prev.filter(user => user !== userId);
     });
+  };
+
+  const handleUserList = (userList: TestUserListType[]) => {
+    return userList.filter(userInfo =>
+      debounceSerachUser.length <= 0
+        ? true
+        : debounceSerachUser
+            .split(',')
+            .filter(term => term.trim() !== '')
+            .some(i => userInfo.userId.includes(i.trim())),
+    );
   };
 
   return (
@@ -88,25 +104,16 @@ const ShareModal = () => {
         </div>
       </div>
       <div className={S.UserCardBox}>
-        {shareUserTest
-          .filter(userInfo =>
-            debounceSerachUser.length <= 0
-              ? true
-              : debounceSerachUser
-                  .split(',')
-                  .filter(term => term.trim() !== '')
-                  .some(i => userInfo.userId.includes(i.trim())),
-          )
-          .map((userInfo, i) => {
-            return (
-              <ShareUserCard
-                data={userInfo}
-                key={i}
-                isChecked={isSelected.includes(userInfo.userId)}
-                onCardClick={() => isUserSelected(userInfo.userId)}
-              />
-            );
-          })}
+        {handleUserList(shareUserTest).map((userInfo, i) => {
+          return (
+            <ShareUserCard
+              data={userInfo}
+              key={i}
+              isChecked={isSelected.includes(userInfo.userId)}
+              onCardClick={() => isUserSelected(userInfo.userId)}
+            />
+          );
+        })}
       </div>
       <button className={S.ShareButton}>보내기</button>
     </div>
