@@ -2,14 +2,12 @@ interface CancelIconProps {
   size?: string;
 }
 
-const CacnelIcon: React.FC<CancelIconProps> = ({ size }) => {
-  const reSizeIconCondition = size ? size : '1.5rem';
-
+const CacnelIcon: React.FC<CancelIconProps> = ({ size = '1.5rem' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={reSizeIconCondition}
-      height={reSizeIconCondition}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
     >
