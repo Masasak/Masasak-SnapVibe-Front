@@ -9,13 +9,11 @@ interface Props {
   inputTitle: string;
 }
 
-const InputForm: React.FC<Props> = ({ buttonContent, inputTitle }) => {
-  return (
-    <div className={S.ContentWrap}>
-      <Input inputTitle={inputTitle} />
-      <SubButton>{buttonContent}</SubButton>
-    </div>
-  );
-};
+const InputForm: React.FC<Props> = ({ buttonContent, inputTitle }) => (
+  <div className={S.ContentWrap}>
+    <Input inputTitle={inputTitle} />
+    <SubButton>{buttonContent}</SubButton>
+  </div>
+);
 
 export default InputForm;
