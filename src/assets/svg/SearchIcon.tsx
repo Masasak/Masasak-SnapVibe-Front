@@ -3,10 +3,8 @@ const SearchIconColor = {
   gray: '#888888',
 } as const;
 
-type SearchIconColorType = keyof typeof SearchIconColor;
-
 interface SearchIconProps {
-  color: SearchIconColorType;
+  color: 'white' | 'gray';
 }
 
 const SearchIcon: React.FC<SearchIconProps> = ({ color }) => (
