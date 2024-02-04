@@ -45,22 +45,18 @@ const ShareModal = () => {
   };
 
   const cancelSelectedUser = (userId: string) => {
-    setIsSelected(prev => {
-      return prev.filter(user => user !== userId);
-    });
+    setIsSelected(prev => prev.filter(user => user !== userId));
   };
 
-  const handleUserList = (userList: TestUserListType[]) => {
-    return userList.filter(userInfo => {
-      return debounceSerachUser.length <= 0
+  const handleUserList = (userList: TestUserListType[]) =>
+    userList.filter(userInfo =>
+      debounceSerachUser.length <= 0
         ? true
         : debounceSerachUser
             .split(',')
             .filter(term => term.trim() !== '')
-            .some(i => userInfo.userId.includes(i.trim()));
-    });
-  };
-
+            .some(i => userInfo.userId.includes(i.trim())),
+    );
   return (
     <div className={S.ShareModalWrapper}>
       <div className={S.ModalCloseButton}>
