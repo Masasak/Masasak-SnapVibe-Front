@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
-import { shareUserTest } from '@public/shareUserTest';
+import { shareUserTest } from 'Data/ShareUserTest';
 
 import * as S from './index.css';
 import * as I from 'assets';
@@ -51,14 +51,18 @@ const ShareModal = () => {
   };
 
   const handleUserList = (userList: TestUserListType[]) => {
-    return userList.filter(userInfo =>
-      debounceSerachUser.length <= 0
+    return userList.filter(userInfo => {
+      return debounceSerachUser.length <= 0
         ? true
         : debounceSerachUser
             .split(',')
             .filter(term => term.trim() !== '')
-            .some(i => userInfo.userId.includes(i.trim())),
-    );
+            .some(i => userInfo.userId.includes(i.trim()));
+    });
+  };
+
+  const sex = (a: string) => {
+    return a;
   };
 
   return (
