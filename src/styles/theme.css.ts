@@ -3,6 +3,7 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 const color = createGlobalTheme(':root', {
   purple: '#3C1E7C',
   purple2: '#201F3A',
+  purple3: '#1A1934',
   textbox: '#2F2E4A',
   background: '#0D0F29',
   blue: '#0055D3',

@@ -5,3 +5,5 @@ export { default as NoticeIcon } from './NoticeIcon';
 export { default as FlagIcon } from './FlagIcon';
 export { default as HeartIcon } from './HeartIcon';
 export { default as ShareIcon } from './ShareIcon';
+export { default as CancelIcon } from './CancelIcon';
+export { default as CheckIcon } from './CheckIcon';
