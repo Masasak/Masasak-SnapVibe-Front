@@ -61,10 +61,6 @@ const ShareModal = () => {
     });
   };
 
-  const sex = (a: string) => {
-    return a;
-  };
-
   return (
     <div className={S.ShareModalWrapper}>
       <div className={S.ModalCloseButton}>
