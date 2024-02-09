@@ -5,7 +5,7 @@ export const ButtonStyle = style({
   width: '27.1875rem',
   height: '4.375rem',
   borderRadius: '0.625rem',
-  backgroundColor: theme.color.purple2,
+  backgroundColor: theme.color.textbox,
   color: theme.grayScale.white,
   ...theme.typo.Body2,
   display: 'flex',
