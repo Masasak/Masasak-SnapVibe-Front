@@ -27,7 +27,7 @@ const ReportModal = () => {
             }}
             isSelect={selectedIndexes.includes(index)}
           >
-            ㅓ{item.content}
+            {item.content}
           </SelectButton>
         </div>
       ))}
