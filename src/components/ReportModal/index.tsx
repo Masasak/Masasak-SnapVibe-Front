@@ -5,12 +5,16 @@ import React, { useState } from 'react';
 import { SelectButton, PrimaryButton } from 'components';
 import { ReportData } from 'Data/ReportMenu';
 import * as S from './index.css';
+import * as I from 'assets';
 
 const ReportModal = () => {
   const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);
 
   return (
     <div className={S.ReportModalWrapper}>
+      <div className={S.ModalCloseButton}>
+        <I.CancelIcon />
+      </div>
       {ReportData.map((item, index) => (
         <div key={index}>
           <SelectButton

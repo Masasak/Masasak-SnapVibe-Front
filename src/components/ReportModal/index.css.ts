@@ -12,3 +12,10 @@ export const ReportModalWrapper = style({
   flexDirection: 'column',
   gap: '1.25rem',
 });
+
+export const ModalCloseButton = style({
+  position: 'absolute',
+  cursor: 'pointer',
+  top: '1rem',
+  right: '1rem',
+});
