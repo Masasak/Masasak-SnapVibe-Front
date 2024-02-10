@@ -18,7 +18,6 @@ const ReportModal = () => {
       {ReportData.map((item, index) => (
         <div key={index}>
           <SelectButton
-            key={index}
             onClick={() => {
               setSelectedIndexes(prev =>
                 prev.includes(index)
@@ -28,7 +27,7 @@ const ReportModal = () => {
             }}
             isSelect={selectedIndexes.includes(index)}
           >
-            {item.content}
+            ㅓ{item.content}
           </SelectButton>
         </div>
       ))}
