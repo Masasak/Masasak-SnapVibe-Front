@@ -1,10 +1,12 @@
 'use client';
 
-import * as I from 'assets';
-import { PrimaryButton, SelectButton } from 'components';
 import { useState } from 'react';
-import * as S from './index.css';
+
 import ReportData from 'Data/ReportMenu.json';
+
+import * as I from 'assets';
+import * as S from './index.css';
+import { PrimaryButton, SelectButton } from 'components';
 
 const ReportModal = () => {
   const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);
