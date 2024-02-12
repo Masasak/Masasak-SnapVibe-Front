@@ -1,1 +1,2 @@
-export { default as ReportData } from './ReportMenu.json';
+export { default as reportData } from './ReportMenu.json';
+export { shareUserTest } from './ShareUserTest';
