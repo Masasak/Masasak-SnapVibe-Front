@@ -1,4 +1,3 @@
-// ReportModal.tsx
 'use client';
 
 import * as I from 'assets';
