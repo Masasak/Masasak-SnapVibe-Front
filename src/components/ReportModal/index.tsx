@@ -1,11 +1,11 @@
 // ReportModal.tsx
 'use client';
 
-import { ReportData } from 'Data/ReportMenu';
 import * as I from 'assets';
 import { PrimaryButton, SelectButton } from 'components';
 import { useState } from 'react';
 import * as S from './index.css';
+import ReportData from 'Data/ReportMenu.json';
 
 const ReportModal = () => {
   const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);
