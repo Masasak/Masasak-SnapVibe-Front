@@ -15,6 +15,7 @@ export const ReportModalWrapper = style({
 
 export const ModalCloseButton = style({
   position: 'absolute',
+  backgroundColor: theme.color.purple3,
   cursor: 'pointer',
   top: '1rem',
   right: '1rem',

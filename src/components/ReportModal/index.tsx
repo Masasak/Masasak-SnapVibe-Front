@@ -13,9 +13,9 @@ const ReportModal = () => {
 
   return (
     <div className={S.ReportModalWrapper}>
-      <div className={S.ModalCloseButton}>
+      <button className={S.ModalCloseButton}>
         <I.CancelIcon />
-      </div>
+      </button>
       {ReportData.map((item, index) => (
         <div key={index}>
           <SelectButton
