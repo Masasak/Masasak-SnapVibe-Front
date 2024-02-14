@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import ReportData from 'Data/ReportMenu.json';
+import { reportData } from 'Data';
 
 import * as I from 'assets';
 import * as S from './index.css';
@@ -16,21 +16,24 @@ const ReportModal = () => {
       <button className={S.ModalCloseButton}>
         <I.CancelIcon />
       </button>
-      {ReportData.map((item, index) => (
-        <div key={index}>
-          <SelectButton
-            onClick={() => {
-              setSelectedIndexes(prev =>
-                prev.includes(index)
-                  ? prev.filter(i => i !== index)
-                  : [...prev, index],
-              );
-            }}
-            isSelect={selectedIndexes.includes(index)}
-          >
-            {item.content}
-          </SelectButton>
-        </div>
+      {reportData.map((item, index) => (
+        <SelectButton
+          key={index}
+          onClick={() => {
+            setSelectedIndexes(prev => {
+              const arr = [...prev];
+              if (arr.indexOf(index) !== -1) {
+                arr.splice(arr.indexOf(index), 1);
+              } else {
+                arr.push(index);
+              }
+              return arr;
+            });
+          }}
+          isSelect={selectedIndexes.indexOf(index) !== -1}
+        >
+          {item.content}
+        </SelectButton>
       ))}
       <PrimaryButton>신고하기</PrimaryButton>
     </div>
