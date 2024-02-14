@@ -17,5 +17,6 @@ export const ButtonStyle = style({
 
   ':hover': {
     border: `0.0625rem solid ${theme.grayScale.white}`,
+    padding: '0 1.4375rem',
   },
 });
