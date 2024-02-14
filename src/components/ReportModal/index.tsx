@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { reportData } from 'Data';
+import { reportData } from 'data';
 
 import * as I from 'assets';
 import * as S from './index.css';
