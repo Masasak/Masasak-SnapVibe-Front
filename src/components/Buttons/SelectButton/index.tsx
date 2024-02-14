@@ -2,6 +2,8 @@
 
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
+import { assignInlineVars } from '@vanilla-extract/dynamic';
+
 import * as S from './index.css';
 
 interface SelectButtonProps
@@ -20,7 +22,9 @@ const SelectButton: React.FC<SelectButtonProps> = ({
   <button
     className={S.ButtonStyle}
     {...attributes}
-    style={{ border: isSelect ? '1px solid white' : '' }}
+    style={assignInlineVars({
+      [S.borderVar]: `${isSelect && '1px solid white'}`,
+    })}
   >
     {children}
   </button>
