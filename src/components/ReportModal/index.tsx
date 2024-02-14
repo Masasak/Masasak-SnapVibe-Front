@@ -11,26 +11,29 @@ import { PrimaryButton, SelectButton } from 'components';
 const ReportModal = () => {
   const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);
 
+  const handleButtonSelected = (idx: number) => {
+    setSelectedIndexes(prev => {
+      const arr = [...prev];
+      const selectedIndex = arr.indexOf(idx);
+      if (selectedIndex !== -1) {
+        arr.splice(selectedIndex, 1);
+      } else {
+        arr.push(idx);
+      }
+      return arr;
+    });
+  };
+
   return (
     <div className={S.ReportModalWrapper}>
       <button className={S.ModalCloseButton}>
         <I.CancelIcon />
       </button>
-      {reportData.map((item, index) => (
+      {reportData.map((item, idx) => (
         <SelectButton
-          key={index}
-          onClick={() => {
-            setSelectedIndexes(prev => {
-              const arr = [...prev];
-              if (arr.indexOf(index) !== -1) {
-                arr.splice(arr.indexOf(index), 1);
-              } else {
-                arr.push(index);
-              }
-              return arr;
-            });
-          }}
-          isSelect={selectedIndexes.indexOf(index) !== -1}
+          key={idx}
+          onClick={() => handleButtonSelected(idx)}
+          isSelect={selectedIndexes.includes(idx)}
         >
           {item.content}
         </SelectButton>
