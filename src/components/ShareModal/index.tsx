@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
-import { shareUserTest } from 'Data/ShareUserTest';
+import { shareUserTest } from 'data';
 
 import * as S from './index.css';
 import * as I from 'assets';
