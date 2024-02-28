@@ -24,4 +24,8 @@ export const RandomButton = style({
   color: theme.grayScale.white,
   backgroundColor: theme.color.purple5,
   fontWeight: '500',
+
+  ':hover': {
+    backgroundColor: theme.color.purple4,
+  },
 });
