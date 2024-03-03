@@ -15,8 +15,8 @@ const RandomChatIcon = () => (
       cy="115"
       r="113"
       stroke="url(#paint1_linear_0_1)"
-      stroke-width="4"
-      stroke-dasharray="12 12"
+      strokeWidth="4"
+      strokeDasharray="12 12"
     />
     <defs>
       <linearGradient
@@ -27,8 +27,8 @@ const RandomChatIcon = () => (
         y2="154"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="#878787" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="#878787" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_0_1"
@@ -38,9 +38,9 @@ const RandomChatIcon = () => (
         y2="230"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9FBFFF" />
-        <stop offset="0.442708" stop-color="#4719FF" stop-opacity="0.679167" />
-        <stop offset="1" stop-color="#C5B6FF" />
+        <stop stopColor="#9FBFFF" />
+        <stop offset="0.442708" stopColor="#4719FF" stopOpacity="0.679167" />
+        <stop offset="1" stopColor="#C5B6FF" />
       </linearGradient>
     </defs>
   </svg>
