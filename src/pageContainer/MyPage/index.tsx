@@ -7,6 +7,7 @@ import { shareUserTest } from 'data';
 import * as S from './index.css';
 
 const MyPage = () => {
+  //추후 데이터 받는 로직 작성
   return (
     <div className={S.PageWrapper}>
       <Header />
