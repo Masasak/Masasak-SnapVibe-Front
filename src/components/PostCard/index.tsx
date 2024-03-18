@@ -30,7 +30,13 @@ const PostCard: React.FC<PostCardProps> = ({
         <I.HeartIcon isLiked={liked} />
       </div>
       <div className={S.PostCardImgWrapper}>
-        <Image fill className={S.Img} src={postImgUrl ?? ''} alt="게시글사진" />
+        <Image
+          fill
+          className={S.Img}
+          src={postImgUrl ?? ''}
+          alt="게시글사진"
+          unoptimized
+        />
       </div>
       <div className={S.ProfileImgWrapper}>
         <Image
@@ -38,6 +44,7 @@ const PostCard: React.FC<PostCardProps> = ({
           className={S.Img}
           src={profileImgUrl ?? ''}
           alt="프로필사진"
+          unoptimized
         />
       </div>
       <div className={S.CardContentWrapper}>
