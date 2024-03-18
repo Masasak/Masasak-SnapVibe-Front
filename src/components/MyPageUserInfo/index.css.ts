@@ -5,6 +5,8 @@ export const MyPageUserBox = style({
   width: '82.5rem',
   height: '286px',
   position: 'relative',
+  backgroundColor: theme.color.background,
+  borderRadius: '0.625rem',
 });
 
 export const CoverImgWrapper = style({
