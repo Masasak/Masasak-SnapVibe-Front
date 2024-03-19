@@ -57,7 +57,7 @@ export const ProfileImgWrapper = style({
 
 export const ContentWrap = style({
   flex: '1',
-  height: '5.375rempx',
+  height: '0.3359rem',
   marginTop: '4rem',
 });
 
