@@ -2,8 +2,6 @@
 
 import { MyPage } from 'pageContainer';
 
-const My = () => {
-  return <MyPage />;
-};
+const My = () => <MyPage />;
 
 export default My;
