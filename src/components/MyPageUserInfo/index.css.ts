@@ -3,7 +3,7 @@ import { theme } from 'styles';
 
 export const MyPageUserBox = style({
   width: '82.5rem',
-  height: '286px',
+  height: '17.875rem',
   position: 'relative',
   backgroundColor: theme.color.background,
   borderRadius: '0.625rem',
