@@ -9,13 +9,7 @@ import * as S from './index.css';
 const MyPageUserInfo = () => {
   const fileInput = useRef<HTMLInputElement>(null);
 
-  const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-
-    if (files) {
-      // console.log(files[0]);
-    }
-  };
+  const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
 
   return (
     <div className={S.MyPageUserBox}>
