@@ -3,7 +3,7 @@ import { theme } from 'styles';
 
 export const PageWrapper = style({
   backgroundColor: theme.color.background,
-  width: '100%',
+  width: '100vw',
   minHeight: '100vh',
 });
 
