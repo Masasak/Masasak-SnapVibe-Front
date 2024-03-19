@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React, { useRef } from 'react';
 
 import * as S from './index.css';
-import { useInsertComma } from 'hooks';
+import { insertComma } from 'hooks';
 
 const MyPageUserInfo = () => {
   const fileInput = useRef<HTMLInputElement>(null);
@@ -41,7 +41,7 @@ const MyPageUserInfo = () => {
           <div className={S.ButtonWrapper}>
             <div className={S.FollowshipButtonWrapper}>
               <button className={S.FollowerButton}>
-                팔로워 {useInsertComma(1000)}
+                팔로워 {insertComma(1000)}
               </button>
               <button className={S.FollowingButton}>팔로잉 100</button>
             </div>

@@ -1,2 +1,2 @@
 export { default as useDebounce } from './useDebounce';
-export { default as useInsertComma } from './useInsertComma';
+export { default as insertComma } from './insertComma';
