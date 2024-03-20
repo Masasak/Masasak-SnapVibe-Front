@@ -18,8 +18,8 @@ const MyPageUserInfo = () => {
         <Image
           src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
           alt="커버 사진"
+          sizes="82.5rem 12.5rem"
           fill
-          unoptimized
         />
         <label className={S.ChangeCoverButton} htmlFor="file">
           커버변경
@@ -34,7 +34,12 @@ const MyPageUserInfo = () => {
       </div>
       <div className={S.UserInfoWrapper}>
         <div className={S.ProfileImgWrapper}>
-          <Image src="/마리오.jpeg" alt="프로필 사진" fill />
+          <Image
+            src="/마리오.jpeg"
+            alt="프로필 사진"
+            sizes="9.375rem 9.375rem"
+            fill
+          />
         </div>
         <div className={S.ContentWrap}>
           <p className={S.UserId}>dongwook1230</p>

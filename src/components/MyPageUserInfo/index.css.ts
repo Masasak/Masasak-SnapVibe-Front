@@ -10,7 +10,7 @@ export const MyPageUserBox = style({
 });
 
 export const CoverImgWrapper = style({
-  width: '100%',
+  width: '82.5rem',
   height: '12.5rem',
   overflow: 'hidden',
   position: 'relative',

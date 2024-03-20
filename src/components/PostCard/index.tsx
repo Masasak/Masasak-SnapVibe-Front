@@ -31,19 +31,21 @@ const PostCard: React.FC<PostCardProps> = ({
       </div>
       <div className={S.PostCardImgWrapper}>
         <Image
-          fill
           className={S.Img}
           src={postImgUrl ?? ''}
           alt="게시글사진"
+          sizes="26.25rem 17.5rem"
+          fill
           unoptimized
         />
       </div>
       <div className={S.ProfileImgWrapper}>
         <Image
-          fill
           className={S.Img}
           src={profileImgUrl ?? ''}
           alt="프로필사진"
+          sizes="5.625rem 5.625rem"
+          fill
           unoptimized
         />
       </div>
