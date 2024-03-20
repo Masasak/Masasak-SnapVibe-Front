@@ -1,5 +1,3 @@
-const insertComma = (value: number) => {
-  return value.toLocaleString();
-};
+const insertComma = (value: number) => value.toLocaleString();
 
 export default insertComma;
