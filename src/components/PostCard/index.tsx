@@ -6,9 +6,10 @@ import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 import { useState } from 'react';
 
+import { PostCardTypes } from 'types';
+
 import * as S from './index.css';
 import * as I from 'assets';
-import { PostCardTypes } from 'types';
 
 import { theme } from 'styles';
 
@@ -30,24 +31,32 @@ const PostCard: React.FC<PostCardProps> = ({
         <I.HeartIcon isLiked={liked} />
       </div>
       <div className={S.PostCardImgWrapper}>
-        <Image
-          className={S.Img}
-          src={postImgUrl ?? ''}
-          alt="게시글사진"
-          sizes="26.25rem 17.5rem"
-          fill
-          unoptimized
-        />
+        {postImgUrl ? (
+          <Image
+            className={S.Img}
+            src={postImgUrl}
+            alt="게시글사진"
+            sizes="26.25rem 17.5rem"
+            fill
+            unoptimized
+          />
+        ) : (
+          'default image'
+        )}
       </div>
       <div className={S.ProfileImgWrapper}>
-        <Image
-          className={S.Img}
-          src={profileImgUrl ?? ''}
-          alt="프로필사진"
-          sizes="5.625rem 5.625rem"
-          fill
-          unoptimized
-        />
+        {profileImgUrl ? (
+          <Image
+            className={S.Img}
+            src={profileImgUrl}
+            alt="프로필사진"
+            sizes="5.625rem 5.625rem"
+            fill
+            unoptimized
+          />
+        ) : (
+          <I.UserIcon size="1.875rem" />
+        )}
       </div>
       <div className={S.CardContentWrapper}>
         <div className={S.CardTitleWrapper}>
