@@ -1,7 +1,11 @@
-const UserIcon = () => (
+interface UserIconProps {
+  size?: string;
+}
+
+const UserIcon: React.FC<UserIconProps> = ({ size }) => (
   <svg
-    width="1.75rem"
-    height="1.75rem"
+    width={size ? size : '1.75rem'}
+    height={size ? size : '1.75rem'}
     viewBox="0 0 28 28"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
