@@ -53,7 +53,7 @@ export const ProfileImgContainer = style({
   width: '5rem',
   height: '5rem',
   borderRadius: '100%',
-  border: '5px solid #222222',
+  border: '0.3125rem solid #222222',
   animation: `${ContentRotate} 1.3s  infinite ease-in-out`,
   position: 'absolute',
   top: '13.75rem',
