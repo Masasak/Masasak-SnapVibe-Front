@@ -10,8 +10,8 @@ export const shareUserTest = [
   },
   {
     isLiked: false,
-    postImgUrl: 'https://example.com/post2.jpg',
-    profileImgUrl: 'https://example.com/profile2.jpg',
+    postImgUrl: '',
+    profileImgUrl: '',
     userId: 'user123333',
     isFollowed: true,
   },
