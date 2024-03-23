@@ -20,6 +20,7 @@ const MyPageUserInfo = () => {
           alt="커버 사진"
           sizes="82.5rem 12.5rem"
           fill
+          unoptimized
         />
         <label className={S.ChangeCoverButton} htmlFor="file">
           커버변경
