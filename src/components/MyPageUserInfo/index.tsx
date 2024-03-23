@@ -18,13 +18,18 @@ const MyPageUserInfo = () => {
   return (
     <div className={S.MyPageUserBox}>
       <div className={S.CoverImgWrapper}>
-        <Image
-          src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
-          alt="커버 사진"
-          sizes="82.5rem 12.5rem"
-          fill
-          unoptimized
-        />
+        {false ? (
+          <Image
+            src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
+            alt="커버 사진"
+            sizes="82.5rem 12.5rem"
+            fill
+            unoptimized
+          />
+        ) : (
+          ''
+        )}
+
         <label className={S.ChangeCoverButton} htmlFor="file">
           커버변경
         </label>
