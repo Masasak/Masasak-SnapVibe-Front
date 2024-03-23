@@ -15,6 +15,7 @@ export const CoverImgWrapper = style({
   overflow: 'hidden',
   position: 'relative',
   borderRadius: '0.625rem',
+  backgroundColor: '#626262',
 });
 
 export const ChangeCoverButton = style({
@@ -49,10 +50,13 @@ export const ProfileImgWrapper = style({
   height: '9.375rem',
   overflow: 'hidden',
   borderRadius: '100%',
-  backgroundColor: 'pink',
+  backgroundColor: '#404040',
   position: 'relative',
   marginRight: '2.25rem',
   zIndex: '1',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 export const ContentWrap = style({
