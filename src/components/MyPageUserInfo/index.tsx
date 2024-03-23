@@ -4,8 +4,11 @@ import Image from 'next/image';
 
 import React, { useRef } from 'react';
 
-import * as S from './index.css';
 import { insertComma } from 'hooks';
+import { shareUserTest } from 'data';
+import { UserIcon } from 'assets';
+
+import * as S from './index.css';
 
 const MyPageUserInfo = () => {
   const fileInput = useRef<HTMLInputElement>(null);
@@ -35,12 +38,17 @@ const MyPageUserInfo = () => {
       </div>
       <div className={S.UserInfoWrapper}>
         <div className={S.ProfileImgWrapper}>
-          <Image
-            src="/마리오.jpeg"
-            alt="프로필 사진"
-            sizes="9.375rem 9.375rem"
-            fill
-          />
+          {shareUserTest[1].profileImgUrl ? (
+            <Image
+              src={shareUserTest[0].profileImgUrl}
+              alt="프로필 사진"
+              sizes="9.375rem 9.375rem"
+              fill
+              unoptimized
+            />
+          ) : (
+            <UserIcon size="3.125rem" />
+          )}
         </div>
         <div className={S.ContentWrap}>
           <p className={S.UserId}>dongwook1230</p>
