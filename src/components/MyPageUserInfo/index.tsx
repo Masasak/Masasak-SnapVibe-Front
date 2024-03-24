@@ -11,7 +11,7 @@ import { UserIcon } from 'assets';
 import * as S from './index.css';
 
 interface TestProps {
-  coverImgUrl?: boolean;
+  coverImgUrl?: string;
 }
 
 const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
@@ -22,7 +22,7 @@ const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
   return (
     <div className={S.MyPageUserBox}>
       <div className={S.CoverImgWrapper}>
-        {coverImgUrl ? (
+        {coverImgUrl && (
           <Image
             src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
             alt="커버 사진"
@@ -30,8 +30,6 @@ const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
             fill
             unoptimized
           />
-        ) : (
-          ''
         )}
 
         <label className={S.ChangeCoverButton} htmlFor="file">
