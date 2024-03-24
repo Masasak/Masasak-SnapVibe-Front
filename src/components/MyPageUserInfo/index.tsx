@@ -10,7 +10,11 @@ import { UserIcon } from 'assets';
 
 import * as S from './index.css';
 
-const MyPageUserInfo = () => {
+interface TestProps {
+  coverImgUrl?: boolean;
+}
+
+const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
   const fileInput = useRef<HTMLInputElement>(null);
 
   const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
@@ -18,7 +22,7 @@ const MyPageUserInfo = () => {
   return (
     <div className={S.MyPageUserBox}>
       <div className={S.CoverImgWrapper}>
-        {false ? (
+        {coverImgUrl ? (
           <Image
             src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
             alt="커버 사진"

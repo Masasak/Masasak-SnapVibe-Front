@@ -8,4 +8,8 @@ export default {
 
 type Story = StoryObj<typeof MyPageUserInfo>;
 
-export const Primary: Story = {};
+export const Primary: Story = {
+  args: {
+    coverImgUrl: '',
+  },
+};
