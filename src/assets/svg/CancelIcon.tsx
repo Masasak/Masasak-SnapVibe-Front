@@ -3,11 +3,11 @@ interface CancelIconProps {
 }
 const DEFAULT_SIZE = '1.5rem' as const;
 
-const CacnelIcon: React.FC<CancelIconProps> = ({ size }) => (
+const CacnelIcon: React.FC<CancelIconProps> = ({ size = DEFAULT_SIZE }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={size ? size : DEFAULT_SIZE}
-    height={size ? size : DEFAULT_SIZE}
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
   >
