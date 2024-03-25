@@ -45,9 +45,9 @@ const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
       </div>
       <div className={S.UserInfoWrapper}>
         <div className={S.ProfileImgWrapper}>
-          {shareUserTest[1].profileImgUrl ? (
+          {shareUserTest[1].images ? (
             <Image
-              src={shareUserTest[0].profileImgUrl}
+              src={shareUserTest[0].images}
               alt="프로필 사진"
               sizes="9.375rem 9.375rem"
               fill

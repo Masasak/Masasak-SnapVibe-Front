@@ -16,8 +16,8 @@ const MyPage = () => {
         <div className={S.PostWrapper}>
           <p className={S.Title}>내 게시물</p>
           <div className={S.PostCardWrapper}>
-            {shareUserTest.map(userInfo => {
-              return <PostCard data={userInfo} key={userInfo.userId} />;
+            {shareUserTest.map((userInfo, i) => {
+              return <PostCard data={userInfo} key={userInfo.author.id} />;
             })}
           </div>
         </div>

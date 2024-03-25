@@ -59,7 +59,7 @@ const PostCard: React.FC<PostCardProps> = ({ data }) => {
       <div className={S.CardContentWrapper}>
         <div className={S.CardTitleWrapper}>
           <div className={S.ContentWrapper}>
-            <p className={S.UserId}>{data.author.id}</p>
+            <p className={S.UserId}>{data.author.nickname}</p>
             <p
               onClick={() => setFollwed(prevState => !prevState)}
               style={assignInlineVars({

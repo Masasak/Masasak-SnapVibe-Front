@@ -10,11 +10,7 @@ import * as S from './index.css';
 import * as I from 'assets';
 import { ShareUserCard } from 'components';
 import { useDebounce } from 'hooks';
-
-interface TestUserListType {
-  userId: string;
-  profileImgUrl: string;
-}
+import { PostCardTypes } from 'types';
 
 const ShareModal = () => {
   const [inputValue, setInputValue] = useState<string>('');
@@ -48,14 +44,14 @@ const ShareModal = () => {
     setIsSelected(prev => prev.filter(user => user !== userId));
   };
 
-  const handleUserList = (userList: TestUserListType[]) =>
+  const handleUserList = (userList: PostCardTypes[]) =>
     userList.filter(userInfo =>
       debounceSerachUser.length <= 0
         ? true
         : debounceSerachUser
             .split(',')
             .filter(term => term.trim() !== '')
-            .some(i => userInfo.userId.includes(i.trim())),
+            .some(i => userInfo.author.id.includes(i.trim())),
     );
   return (
     <div className={S.ShareModalWrapper}>
@@ -101,9 +97,9 @@ const ShareModal = () => {
         {handleUserList(shareUserTest).map(userInfo => (
           <ShareUserCard
             data={userInfo}
-            key={userInfo.userId}
-            isChecked={isSelected.includes(userInfo.userId)}
-            onCardClick={() => isUserSelected(userInfo.userId)}
+            key={userInfo.author.id}
+            isChecked={isSelected.includes(userInfo.author.nickname)}
+            onCardClick={() => isUserSelected(userInfo.author.nickname)}
           />
         ))}
       </div>
