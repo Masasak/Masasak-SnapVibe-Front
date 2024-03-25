@@ -5,6 +5,7 @@ export interface myPageTypes {
     nickName: string;
     followers: number;
     followings: number;
-    profileImageUrl: string;
+    profileImageUrl?: string;
+    profileCoverImage?: string;
   };
 }

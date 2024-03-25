@@ -7,14 +7,15 @@ import React, { useRef } from 'react';
 import { insertComma } from 'hooks';
 import { shareUserTest } from 'data';
 import { UserIcon } from 'assets';
+import { myPageTypes } from 'types';
 
 import * as S from './index.css';
 
-interface TestProps {
-  coverImgUrl?: string;
+interface MyPageProps {
+  data: myPageTypes;
 }
 
-const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
+const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
   const fileInput = useRef<HTMLInputElement>(null);
 
   // const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
@@ -22,7 +23,7 @@ const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
   return (
     <div className={S.MyPageUserBox}>
       <div className={S.CoverImgWrapper}>
-        {coverImgUrl && (
+        {data.user.profileCoverImage && (
           <Image
             src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
             alt="커버 사진"
@@ -58,13 +59,15 @@ const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
           )}
         </div>
         <div className={S.ContentWrap}>
-          <p className={S.UserId}>dongwook1230</p>
+          <p className={S.UserId}>{data.user.nickName}</p>
           <div className={S.ButtonWrapper}>
             <div className={S.FollowshipButtonWrapper}>
               <button className={S.FollowerButton}>
-                팔로워 {insertComma(1000)}
+                팔로워 {insertComma(data.user.followers)}
               </button>
-              <button className={S.FollowingButton}>팔로잉 100</button>
+              <button className={S.FollowingButton}>
+                팔로잉 {insertComma(data.user.followings)}
+              </button>
             </div>
             <div>
               <button className={S.HandleInfoButton}>정보 수정</button>
