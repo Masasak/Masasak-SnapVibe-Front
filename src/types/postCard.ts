@@ -1,7 +1,12 @@
 export interface PostCardTypes {
-  isLiked: boolean;
-  postImgUrl: string;
-  profileImgUrl: string;
-  userId: string;
-  isFollowed: boolean;
+  content: string;
+  images: string;
+  author: {
+    id: string;
+    nickname: string;
+    profileImageUrl?: string;
+    isFollowed: boolean;
+  };
+  isHeart: boolean;
+  createdAt: string;
 }

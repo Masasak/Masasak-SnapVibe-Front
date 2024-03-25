@@ -17,11 +17,9 @@ interface PostCardProps {
   data: PostCardTypes;
 }
 
-const PostCard: React.FC<PostCardProps> = ({
-  data: { isLiked, isFollowed, postImgUrl, profileImgUrl, userId },
-}) => {
-  const [liked, setLiked] = useState<boolean>(isLiked);
-  const [followed, setFollwed] = useState<boolean>(isFollowed);
+const PostCard: React.FC<PostCardProps> = ({ data }) => {
+  const [liked, setLiked] = useState<boolean>(data.isHeart);
+  const [followed, setFollwed] = useState<boolean>(data.author.isFollowed);
   return (
     <div className={S.PostCardWrap}>
       <div
@@ -31,10 +29,10 @@ const PostCard: React.FC<PostCardProps> = ({
         <I.HeartIcon isLiked={liked} />
       </div>
       <div className={S.PostCardImgWrapper}>
-        {postImgUrl ? (
+        {data.images ? (
           <Image
             className={S.Img}
-            src={postImgUrl}
+            src={data.images}
             alt="게시글사진"
             sizes="26.25rem 17.5rem"
             fill
@@ -45,10 +43,10 @@ const PostCard: React.FC<PostCardProps> = ({
         )}
       </div>
       <div className={S.ProfileImgWrapper}>
-        {profileImgUrl ? (
+        {data.author.profileImageUrl ? (
           <Image
             className={S.Img}
-            src={profileImgUrl}
+            src={data.author.profileImageUrl}
             alt="프로필사진"
             sizes="5.625rem 5.625rem"
             fill
@@ -61,7 +59,7 @@ const PostCard: React.FC<PostCardProps> = ({
       <div className={S.CardContentWrapper}>
         <div className={S.CardTitleWrapper}>
           <div className={S.ContentWrapper}>
-            <p className={S.UserId}>{userId}</p>
+            <p className={S.UserId}>{data.author.id}</p>
             <p
               onClick={() => setFollwed(prevState => !prevState)}
               style={assignInlineVars({
