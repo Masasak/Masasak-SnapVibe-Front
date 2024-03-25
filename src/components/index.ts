@@ -6,3 +6,5 @@ export { default as PostCard } from './PostCard';
 export { default as ShareModal } from './ShareModal';
 export { default as ShareUserCard } from './ShareUserCard';
 export { default as SelectButton } from './Buttons/SelectButton';
+export { default as MyPageUserInfo } from './MyPageUserInfo';
+export { default as Header } from './Header';

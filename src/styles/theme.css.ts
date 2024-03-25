@@ -14,6 +14,7 @@ const color = createGlobalTheme(':root', {
 
 const grayScale = createGlobalTheme(':root', {
   Darkgray: '#222222',
+  Lightgray: '#BCBCBC',
   gray: '#999999',
   gray2: '#777777',
   gray3: '#404040',

@@ -16,9 +16,15 @@ export const PostCardImgWrapper = style({
   height: '17.5rem',
   borderTopLeftRadius: '0.625rem',
   borderTopRightRadius: '0.625rem',
+  backgroundColor: theme.grayScale.gray3,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   position: 'relative',
   overflow: 'hidden',
   cursor: 'pointer',
+  ...theme.typo.Body2,
+  color: theme.grayScale.gray2,
 });
 
 export const Img = style({
@@ -38,26 +44,30 @@ export const IconWrapper = style({
 });
 
 export const ProfileImgWrapper = style({
-  width: '5.625rem',
-  height: '5.625rem',
+  width: '5rem',
+  height: '5rem',
+  display: 'flex',
+  justifyContent: 'center',
+  backgroundColor: theme.grayScale.gray3,
+  alignItems: 'center',
   borderRadius: '100%',
   border: '0.3125rem solid #222222',
   position: 'absolute',
   top: '13.75rem',
   left: '1rem',
+  boxSizing: 'unset',
   overflow: 'hidden',
   cursor: 'pointer',
 });
 
 export const CardContentWrapper = style({
   width: '23.25rem',
-  margin: '0 auto',
+  margin: '2.125rem 1.5rem 1.5rem 1.5rem',
 });
 
 export const CardTitleWrapper = style({
   width: '100%',
   height: '1.5rem',
-  marginTop: '2.0625rem',
   display: 'flex',
   justifyContent: 'space-between',
 });

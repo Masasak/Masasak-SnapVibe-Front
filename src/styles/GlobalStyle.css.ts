@@ -21,6 +21,11 @@ const fonts = [
 globalStyle('body', {
   overscrollBehaviorY: 'none',
   overflowX: 'hidden',
+  height: '100dvh',
+});
+
+globalStyle('html', {
+  height: '100dvh',
 });
 
 globalStyle('body,*', {
