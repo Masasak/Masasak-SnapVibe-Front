@@ -16,7 +16,7 @@ export const Primary: Story = {
       images: '',
       author: {
         id: 'dongwook1207',
-        nickname: '',
+        nickname: 'dongwook1207',
         profileImageUrl: '',
         isFollowed: true,
       },
