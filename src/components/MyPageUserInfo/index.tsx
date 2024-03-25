@@ -17,7 +17,7 @@ interface TestProps {
 const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
   const fileInput = useRef<HTMLInputElement>(null);
 
-  const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
+  // const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
 
   return (
     <div className={S.MyPageUserBox}>
@@ -39,7 +39,7 @@ const MyPageUserInfo: React.FC<TestProps> = ({ coverImgUrl }) => {
           type="file"
           id="file"
           ref={fileInput}
-          onChange={e => handleCoverImg(e)}
+          // onChange={e => handleCoverImg(e)}
           style={{ display: 'none' }}
         />
       </div>
