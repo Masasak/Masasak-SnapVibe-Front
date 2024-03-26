@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
-import { shareUserTest } from 'data';
+import { shareUserTest } from 'Data';
 
 import * as S from './index.css';
 import * as I from 'assets';
@@ -96,7 +96,8 @@ const ShareModal = () => {
       <div className={S.UserCardBox}>
         {handleUserList(shareUserTest).map(userInfo => (
           <ShareUserCard
-            data={userInfo}
+            profileImageUrl={userInfo.author.profileImageUrl}
+            nickName={userInfo.author.id}
             key={userInfo.author.id}
             isChecked={isSelected.includes(userInfo.author.nickname)}
             onCardClick={() => isUserSelected(userInfo.author.nickname)}
