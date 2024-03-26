@@ -18,9 +18,13 @@ export const UserInfoWrapper = style({
 export const UserImgWrapper = style({
   width: '3.125rem',
   height: '3.125rem',
+  backgroundColor: theme.grayScale.gray3,
   borderRadius: '100%',
   position: 'relative',
   overflow: 'hidden',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   cursor: 'pointer',
   marginRight: '1rem',
 });
