@@ -2,7 +2,7 @@
 
 import { Header, MyPageUserInfo, PostCard } from 'components';
 
-import { shareUserTest } from 'data';
+import { shareUserTest } from 'Data';
 
 import * as S from './index.css';
 
@@ -16,7 +16,7 @@ const MyPage = () => {
         <div className={S.PostWrapper}>
           <p className={S.Title}>내 게시물</p>
           <div className={S.PostCardWrapper}>
-            {shareUserTest.map((userInfo, i) => {
+            {shareUserTest.map(userInfo => {
               return <PostCard data={userInfo} key={userInfo.author.id} />;
             })}
           </div>
