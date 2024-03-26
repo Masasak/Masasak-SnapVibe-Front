@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 
-import { reportData } from 'data';
+import { reportData } from 'Data';
+import { PrimaryButton, SelectButton } from 'components';
 
 import * as I from 'assets';
 import * as S from './index.css';
-import { PrimaryButton, SelectButton } from 'components';
 
 const ReportModal = () => {
   const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);

@@ -12,13 +12,11 @@ export const Primary: Story = {
   args: {
     data: {
       user: {
-        id: 'dongwoo1206',
-        name: 'dongwook1206',
+        id: 'dongwook1207',
         nickName: 'dongwook1207',
-        followers: 100,
-        followings: 100,
-        profileCoverImage: '',
-        profileImageUrl: '',
+        name: '이동욱',
+        followers: 1000,
+        followings: 199,
       },
     },
   },

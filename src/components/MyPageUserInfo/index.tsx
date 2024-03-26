@@ -5,17 +5,16 @@ import Image from 'next/image';
 import React, { useRef } from 'react';
 
 import { insertComma } from 'hooks';
-import { shareUserTest } from 'data';
-import { UserIcon } from 'assets';
 import { myPageTypes } from 'types';
+import { UserIcon } from 'assets';
 
 import * as S from './index.css';
 
-interface MyPageProps {
+interface MyPageUserInfoProps {
   data: myPageTypes;
 }
 
-const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
+const MyPageUserInfo: React.FC<MyPageUserInfoProps> = ({ data }) => {
   const fileInput = useRef<HTMLInputElement>(null);
 
   // const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
@@ -32,7 +31,6 @@ const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
             unoptimized
           />
         )}
-
         <label className={S.ChangeCoverButton} htmlFor="file">
           커버변경
         </label>
@@ -46,9 +44,9 @@ const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
       </div>
       <div className={S.UserInfoWrapper}>
         <div className={S.ProfileImgWrapper}>
-          {shareUserTest[1].images ? (
+          {data.user.profileImageUrl ? (
             <Image
-              src={shareUserTest[0].images}
+              src={data.user.profileImageUrl}
               alt="프로필 사진"
               sizes="9.375rem 9.375rem"
               fill
