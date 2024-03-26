@@ -5,17 +5,12 @@ import Image from 'next/image';
 import React, { useRef } from 'react';
 
 import { insertComma } from 'hooks';
-import { shareUserTest } from 'data';
+import { shareUserTest, MyPageTest } from 'Data';
 import { UserIcon } from 'assets';
-import { myPageTypes } from 'types';
 
 import * as S from './index.css';
 
-interface MyPageProps {
-  data: myPageTypes;
-}
-
-const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
+const MyPageUserInfo = () => {
   const fileInput = useRef<HTMLInputElement>(null);
 
   // const handleCoverImg = (e: React.ChangeEvent<HTMLInputElement>) => {};
@@ -23,7 +18,7 @@ const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
   return (
     <div className={S.MyPageUserBox}>
       <div className={S.CoverImgWrapper}>
-        {data.user.profileCoverImage && (
+        {MyPageTest[0].user.profileCoverImage && (
           <Image
             src="https://i.pinimg.com/originals/3d/04/83/3d0483a943e61b82fb4740601bbebd8c.jpg"
             alt="커버 사진"
@@ -32,7 +27,6 @@ const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
             unoptimized
           />
         )}
-
         <label className={S.ChangeCoverButton} htmlFor="file">
           커버변경
         </label>
@@ -46,7 +40,7 @@ const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
       </div>
       <div className={S.UserInfoWrapper}>
         <div className={S.ProfileImgWrapper}>
-          {shareUserTest[1].images ? (
+          {MyPageTest[0].user.profileImageUrl ? (
             <Image
               src={shareUserTest[0].images}
               alt="프로필 사진"
@@ -59,14 +53,14 @@ const MyPageUserInfo: React.FC<MyPageProps> = ({ data }) => {
           )}
         </div>
         <div className={S.ContentWrap}>
-          <p className={S.UserId}>{data.user.nickName}</p>
+          <p className={S.UserId}>{MyPageTest[0].user.nickName}</p>
           <div className={S.ButtonWrapper}>
             <div className={S.FollowshipButtonWrapper}>
               <button className={S.FollowerButton}>
-                팔로워 {insertComma(data.user.followers)}
+                팔로워 {insertComma(MyPageTest[0].user.followers)}
               </button>
               <button className={S.FollowingButton}>
-                팔로잉 {insertComma(data.user.followings)}
+                팔로잉 {insertComma(MyPageTest[0].user.followings)}
               </button>
             </div>
             <div>
