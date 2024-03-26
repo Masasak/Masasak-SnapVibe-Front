@@ -50,7 +50,7 @@ export const ProfileImgWrapper = style({
   height: '9.375rem',
   overflow: 'hidden',
   borderRadius: '100%',
-  backgroundColor: '#404040',
+  backgroundColor: theme.grayScale.gray3,
   position: 'relative',
   marginRight: '2.25rem',
   zIndex: '1',
