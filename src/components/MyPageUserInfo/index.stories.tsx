@@ -8,4 +8,16 @@ export default {
 
 type Story = StoryObj<typeof MyPageUserInfo>;
 
-export const Primary: Story = {};
+export const Primary: Story = {
+  args: {
+    data: {
+      user: {
+        id: 'dongwook1207',
+        nickName: 'dongwook1207',
+        name: '이동욱',
+        followers: 1000,
+        followings: 199,
+      },
+    },
+  },
+};

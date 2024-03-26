@@ -2,7 +2,7 @@
 
 import { Header, MyPageUserInfo, PostCard } from 'components';
 
-import { shareUserTest } from 'Data';
+import { shareUserTest, MyPageTest } from 'Data';
 
 import * as S from './index.css';
 
@@ -12,7 +12,7 @@ const MyPage = () => {
     <div className={S.PageWrapper}>
       <Header />
       <div className={S.ContentWrapper}>
-        <MyPageUserInfo />
+        <MyPageUserInfo data={MyPageTest} />
         <div className={S.PostWrapper}>
           <p className={S.Title}>내 게시물</p>
           <div className={S.PostCardWrapper}>
