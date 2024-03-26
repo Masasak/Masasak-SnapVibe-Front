@@ -4,25 +4,30 @@ import React from 'react';
 
 import * as S from './index.css';
 import * as I from 'assets';
-import { PostCardTypes } from 'types';
 
 interface ShareUserCardProps {
-  data: PostCardTypes;
+  profileImageUrl?: string;
+  nickName?: string;
   isChecked: boolean;
   onCardClick: () => void;
 }
 
 const ShareUserCard: React.FC<ShareUserCardProps> = ({
-  data,
+  profileImageUrl,
+  nickName,
   isChecked,
   onCardClick,
 }) => (
   <div className={S.UserCardWrapper}>
     <div className={S.UserInfoWrapper}>
       <div className={S.UserImgWrapper}>
-        <Image src={data.author.profileImageUrl ?? ''} alt="유저사진" fill />
+        {profileImageUrl ? (
+          <Image src={profileImageUrl} alt="유저사진" fill />
+        ) : (
+          <I.UserIcon size="1.5rem" />
+        )}
       </div>
-      <div className={S.UserId}>{data.author.nickname}</div>
+      <div className={S.UserId}>{nickName}</div>
     </div>
     <div className={S.CheckIconWrapper} onClick={onCardClick}>
       <I.CheckIcon isChecked={isChecked} />
