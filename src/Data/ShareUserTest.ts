@@ -49,4 +49,52 @@ export const shareUserTest: PostCardTypes[] = [
     isHeart: true,
     createdAt: '',
   },
+  {
+    content: '안녕',
+    images: '',
+    author: {
+      id: '이태랑',
+      nickname: '이태랑',
+      profileImageUrl: '',
+      isFollowed: true,
+    },
+    isHeart: true,
+    createdAt: '',
+  },
+  {
+    content: '안녕',
+    images: '',
+    author: {
+      id: '이태랑',
+      nickname: '이태랑',
+      profileImageUrl: '',
+      isFollowed: true,
+    },
+    isHeart: true,
+    createdAt: '',
+  },
+  {
+    content: '안녕',
+    images: '',
+    author: {
+      id: '이태랑',
+      nickname: '이태랑',
+      profileImageUrl: '',
+      isFollowed: true,
+    },
+    isHeart: true,
+    createdAt: '',
+  },
+  {
+    content: '안녕',
+    images: '',
+    author: {
+      id: '이태랑',
+      nickname: '이태랑',
+      profileImageUrl: '',
+      isFollowed: true,
+    },
+    isHeart: true,
+    createdAt: '',
+  },
 ];
