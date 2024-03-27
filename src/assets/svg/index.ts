@@ -8,3 +8,4 @@ export { default as ShareIcon } from './ShareIcon';
 export { default as CancelIcon } from './CancelIcon';
 export { default as CheckIcon } from './CheckIcon';
 export { default as RandomChatIcon } from './RandomChatIcon';
+export { default as MainTitleIcon } from './MainTitleIcon';
